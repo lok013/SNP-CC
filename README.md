@@ -1,5 +1,13 @@
 # Social Networking Platform to Connect Classmates
 
+### Made with teamwork by:
+1. Alok Mukesh Sharma 
+2. Zaid Zaheer Sheliya 
+3. Vikash Rakesh Singh
+
+### Under the Guidence of 
+1. Asst.prof - Krunali Mehta
+
 ## Overview
 This project is a secure social networking platform for students to connect via private and group chats. Built for real-time communication, it also includes an admin panel for user management.
 
@@ -27,7 +35,8 @@ We prioritize security across the platform:
 
 ## Deployment
 - The application can be deployed across different environments (development, production) and devices using Flask.
-- The flask are running on port 5000,5001,5002,5003,5004 please figure it out which port is of which template.
+
 
 ## Note
 - The project might contain some issues in running, so please proceed and run at your own discretion.
+- The flask servers are running on port 5000,5001,5002,5003,5004.
