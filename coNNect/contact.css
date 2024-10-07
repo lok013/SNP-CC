@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --body-color: #fff;
+  --nav-color: #fff;
+  --side-nav: #fff;
+  --text-color: #163ca7;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: var(--body-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body.dark {
+  --body-color: #18191a;
+  --nav-color: #242526;
+  --side-nav: #242526;
+  --text-color: #ccc;
+  --search-bar: #242526;
+}
+
+.container {
+  background: var(--body-color);
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 10px 10px 10px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+  color: #333;
+}
+#message {
+  color: #333;
+}
+body.dark .input-box input,
+.input-box textarea {
+  color: var(--text-color);
+}
+
+.input-box label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #333;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+body.dark .input-box label {
+  color: var(--text-color);
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label,
+.input-box textarea:focus + label,
+.input-box textarea:valid + label {
+  top: -20px;
+  left: 0;
+  color: #333;
+  font-size: 12px;
+}
+
+body.dark .input-box input:focus + label,
+.input-box input:valid + label,
+.input-box textarea:focus + label,
+.input-box textarea:valid + label {
+  color: var(--text-color);
+}
+
+.input-box textarea {
+  height: 100px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--text-color);
+  color: var(--body-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  color: var(--text-color);
+  background: var(--body-color);
+  font-weight: bold;
+}
+
+.success-message {
+  margin-top: 20px;
+  display: none;
+  color: var(--text-color);
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../static/login.css">
+</head>
+<body>
+    <!-- Logo and Connect Text -->
+    <!-- Login Form -->
+    <div id="login-form">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <label for="roll_number">Roll Number:</label>
+            <input type="text" id="roll_number" name="roll_number" required>
+            <br>
+            <label for="secret_pin">4-Digit PIN:</label>
+            <input type="number" id="secret_pin" name="secret_pin" min="1000" max="9999" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+        {% if error %}
+        <p style="color: red; margin-top: 10px;">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

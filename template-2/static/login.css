@@ -1,0 +1,148 @@
+/* Base styles for the login form */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    position: relative; /* Ensure the header can be positioned absolutely */
+}
+
+/* Header styles */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Aligns the header to the left side */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Reduced gap to bring the logo and title closer */
+}
+
+.header h2{
+    font-size: 35px;
+    cursor: pointer;
+    margin-left: 0; /* No negative margin needed */
+}
+
+.header h2 span{
+    color: blue;
+}
+
+.logo {
+    width: 120px; /* Increased size for more visibility */
+    height: auto;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.title span {
+    color: #28a745; /* Highlight part of the text */
+}
+
+/* Styling for the login form container */
+#login-form {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 300px; /* Fixed width for larger screens */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+/* Style for labels, inputs, and buttons */
+#login-form label, #login-form input, #login-form button {
+    display: block;
+    width: 100%; /* Full width relative to the container */
+    margin: 10px 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in the width */
+}
+
+#login-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+#login-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+#login-form button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design Starts Here */
+
+/* Ensure the form fits smaller screens like tablets and phones */
+@media (max-width: 600px) {
+    /* Reduce the width of the login form for smaller screens */
+    #login-form {
+        width: 100%; /* Takes up 100% of the viewport width on smaller screens */
+        max-width: 400px; /* Limit the maximum width for readability */
+        padding: 15px; /* Reduce padding to save space */
+    }
+
+    /* Adjust input fields and button to fit nicely on smaller screens */
+    #login-form label, #login-form input, #login-form button {
+        margin: 8px 0; /* Adjust margin for consistency */
+    }
+
+    /* Adjust font size for smaller screens */
+    #login-form button {
+        font-size: 0.9em; /* Slightly reduce font size */
+    }
+
+    /* Adjust logo and title size for smaller screens */
+    .logo {
+        width: 100px; /* Keep the logo larger */
+    }
+
+    .header h1 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media (max-width: 400px) {
+    #login-form {
+        width: 95%; /* Takes up 95% of the viewport width on very small screens */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    /* Reduce the overall font size for the form to fit better */
+    #login-form h2 {
+        font-size: 1.5em; /* Slightly reduce the header font size */
+    }
+
+    /* Adjust input fields and button further if needed */
+    #login-form button {
+        font-size: 0.85em; /* Further reduce font size */
+        padding: 8px; /* Reduce button padding for better fit */
+    }
+
+    /* Further adjust logo and title size */
+    .logo {
+        width: 80px; /* Keep a visible size for very small screens */
+    }
+
+    .header h1 {
+        font-size: 24px; /* Further adjust font size */
+    }
+}

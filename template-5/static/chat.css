@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    max-width: 800px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-info h4 {
+    margin: 0;
+}
+
+.logout-btn {
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.chat-box {
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.messages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.messages-list li {
+    margin-bottom: 10px;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.message.sent {
+    background-color: #e1ffc7;
+    margin-left: auto;
+}
+
+.message.received {
+    background-color: #f8f9fa;
+}
+
+.chat-input {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+.chat-input button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .chat-container {
+        margin: 10px;
+    }
+
+    .chat-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chat-info h4 {
+        margin-bottom: 10px;
+    }
+
+    .chat-input {
+        flex-direction: column;
+    }
+
+    .chat-input input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .chat-input button {
+        width: 100%;
+    }
+
+    .chat-box {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chat-header {
+        padding: 10px;
+    }
+
+    .chat-info h4 {
+        font-size: 14px;
+    }
+
+    .logout-btn {
+        padding: 6px 12px;
+    }
+
+    .chat-input input,
+    .chat-input button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .chat-box {
+        height: 250px;
+    }
+}
+
+
+/* Existing CSS */
+
+.chat-input {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    position: relative;
+}
+
+#emoji-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.emoji-picker {
+    display: none;
+    position: absolute;
+    bottom: 50px; /* Adjust if necessary */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.emoji-picker span {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.emoji-picker span:hover {
+    background-color: #f0f0f0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .chat-input {
+        flex-direction: column;
+    }
+
+    .emoji-picker {
+        bottom: 40px; /* Adjust if necessary */
+    }
+}

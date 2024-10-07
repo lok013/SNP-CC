@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify User</title>
+    <link rel="stylesheet" href="../static/modify.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Modify User</h1>
+        <form action="/api/users/update/{{ user['roll_number'] }}" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ user['name'] }}" required><br>
+            
+            <label for="secret_pin">Secret PIN:</label>
+            <input type="text" id="secret_pin" name="secret_pin" value="{{ user['secret_pin'] }}" required><br>
+            
+            <button type="submit">Save Changes</button>
+        </form>
+        
+    </div>
+</body>
+</html>

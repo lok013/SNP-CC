@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>coNNect</title>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="input-box">
+          <input type="text" id="name" name="name" required />
+          <label for="name">Full Name</label>
+        </div>
+
+        <div class="input-box">
+          <input type="email" id="email" name="email" required />
+          <label for="email">Email Address</label>
+        </div>
+
+        <div class="input-box">
+          <input type="text" id="subject" name="subject" required />
+          <label for="subject">Subject</label>
+        </div>
+
+        <div class="input-box">
+          <textarea id="msg" name="message" required></textarea>
+          <label for="message">Your Message</label>
+        </div>
+
+        <button type="submit" class="submit-btn" onclick="sendMail()">Send Message</button>
+      </form>
+      <div class="success-message" id="successMessage">
+        Your message has been sent successfully!
+      </div>
+    </div>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "fADciYy31uKNYNaAd",
+      });
+   })();
+</script>
+    <script src="script.js"></script>
+  </body>
+</html>

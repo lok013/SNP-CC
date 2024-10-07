@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Chat Application</title>
+    <link rel="stylesheet" href="../static/chat_g.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="chat-info">
+                <h4>Logged in as: <span id="roll-number">{{ roll_number }}</span></h4>
+            </div>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+        </div>
+
+        <!-- Room Controls -->
+        <div class="room-controls">
+            <button id="create-room-btn">Create Room</button>
+            <input type="text" id="room-code-input" placeholder="Enter room code to join">
+            <button id="join-room-btn">Join Room</button>
+        </div>
+
+        <!-- Display current room code -->
+        <div id="current-room" style="display:none;">
+            <h4>Current Room: <span id="current-room-code"></span></h4>
+            <button id="leave-room-btn">Leave Room</button>
+        </div>
+
+        <!-- Chat Box -->
+        <div class="chat-box">
+            <ul id="messages-list" class="messages-list">
+                <!-- Messages will be appended here -->
+            </ul>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <input type="text" id="message" placeholder="Enter message">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.min.js"></script>
+    <script src="../static/chat_g.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../static/admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        <div class="actions">
+            <button id="addUserBtn">Add User</button>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Enter Roll Number">
+                <button id="searchBtn">Search</button>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Roll Number</th>
+                    <th>Name</th>
+                    <th>Secret PIN</th>
+                    <th>Delete</th>
+                    <th>Modify</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <!-- User rows will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="../static/admin.js"></script>
+</body>
+</html>

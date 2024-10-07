@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Chat</title>
+    <link rel="stylesheet" href="../static/index.css">
+    <script defer src="../static/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome, {{ roll_number }}!</h1>
+            <p>Choose your chat application:</p>
+        </header>
+        <div class="options">
+            <div class="option-card" id="private_chat">
+                <h2>Private Chat</h2>
+                <p>Engage in one-on-one conversations securely and privately.</p>
+                <button class="btn" data-chat-type="private">Go to Private Chat</button>
+            </div>
+            <div class="option-card" id="group_chat">
+                <h2>Group Chat</h2>
+                <p>Join group discussions and collaborate with multiple users.</p>
+                <button class="btn" data-chat-type="group">Go to Group Chat</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exists Page</title>
+    <link rel="stylesheet" href="../static/k.css">
+</head>
+<body>
+    <!-- Logo and Connect Text -->
+    <!-- Login Form -->
+    <div id="login-form">
+        <h2>Exists</h2>
+        <form action="/exists" method="post">
+            <label for="roll_number">Roll Number:</label>
+            <input type="text" id="roll_number" name="roll_number" required>
+            <br>
+            <button type="submit">Check</button>
+        </form>
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
